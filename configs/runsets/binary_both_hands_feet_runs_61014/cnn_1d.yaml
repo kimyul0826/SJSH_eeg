@@ -1,0 +1,56 @@
+data_root: ../files
+subjects: null
+train_subjects: null
+val_subjects: null
+test_subjects: null
+subject_split_seed: 42
+subject_split_ratios:
+- 0.7
+- 0.15
+- 0.15
+runs:
+- 6
+- 10
+- 14
+exclude_runs:
+- 1
+- 2
+epoch_duration: 4.0
+sfreq: 160
+resample: true
+verify_channel_order: true
+canonical_channels: null
+coord_cache_path: data/coords_cache.npz
+tokenizer_type: cnn
+pe_type: 1d
+d_model: 128
+nhead: 4
+num_layers: 1
+dim_feedforward: 256
+dropout: 0.1
+patch_size: 40
+time_encoding_type: normalized_linear
+pe_1dt_combine: add
+patch_pool_mode: mean
+attention_pooling_num_heads: 4
+num_channels: 64
+pooling_type: mean
+num_classes: 2
+batch_size: 16
+num_workers: 2
+prefetch_factor: 2
+raw_cache_size: 6
+lr: 0.0003
+weight_decay: 0.01
+epochs: 100
+early_stopping_patience: 15
+early_stopping_min_delta: 0.0
+show_progress: true
+seed: 42
+device: cuda
+results_root: results/runsets/binary_both_hands_feet_runs_61014
+master_results_csv: null
+class_names:
+- both_hands
+- both_feet
+log_txt_append: false

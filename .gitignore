@@ -1,0 +1,26 @@
+# Experiment outputs & checkpoints (large / reproducible from training)
+results/
+checkpoints/
+*.pt
+*.pth
+
+# Coordinate cache & local data (optional; remove line if you want to commit small caches)
+data/*.npz
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+.env
+*.egg-info/
+dist/
+build/
+
+# IDE / OS
+.idea/
+.vscode/
+.cursor/
+.DS_Store
+Thumbs.db
